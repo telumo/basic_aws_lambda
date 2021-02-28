@@ -3,7 +3,6 @@ service: basic-aws-lambda
 provider:
   name: aws
   runtime: python3.8
-  versionFunction: false
   memorySize: 128
   region: eu-north-1
 
