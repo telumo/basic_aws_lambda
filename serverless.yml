@@ -3,11 +3,14 @@ service: basic-aws-lambda
 provider:
   name: aws
   runtime: python3.8
-  lambdaHashingVersion: 20201221
-  stage: dev
+  versionFunction: false
+  memorySize: 128
   region: eu-north-1
 
 functions:
   hello:
     handler: src/handler.hello
-
+    events:
+      - http:
+        path: echo/hello
+        method: get
