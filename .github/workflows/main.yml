@@ -21,7 +21,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 #     - name: Setup tmate session
 #       uses: mxschmitt/action-tmate@v3
-    - run: npm i -g serverless
+    - run: npm i -g serverless@latest
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
