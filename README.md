@@ -11,3 +11,4 @@
 ## What I want to do
 - Static website in S3 can call Lambda and do something related to DynamoDB.
 - All processes such as integration and deployment are automated (CI/CD).
+- Connect github actions to Slack.
