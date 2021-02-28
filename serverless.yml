@@ -5,7 +5,7 @@ provider:
   runtime: python3.8
   versionFunction: false
   memorySize: 128
-  region: eu-north-1
+  region: us-east-2
 
 functions:
   hello:
