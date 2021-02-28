@@ -4,12 +4,10 @@ provider:
   name: aws
   runtime: python3.8
   memorySize: 128
-  region: eu-north-1
+  region: us-east-2
 
 functions:
   hello:
     handler: src/handler.hello
     events:
-      - http:
-        path: echo/hello
-        method: get
+      - http: get hello
