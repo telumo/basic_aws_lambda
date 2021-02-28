@@ -5,9 +5,22 @@ provider:
   region: eu-west-1
   runtime: python3.8
   memorySize: 128
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:QUery
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+      Resource: "*"
+
 
 functions:
-  hello:
-    handler: src/handler.hello
+  read:
+    handler: src/handler.get_all
     events:
-      - http: get hello
+      - http: get read
+  insert:
+    handler: src/handler.insert_item
+    events:
+      - http: post insert

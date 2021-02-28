@@ -1,16 +1,47 @@
+import re
 import json
+import boto3
+from botocore.exceptions import ClientError
 
-
-def hello(event, context):
-    print("Hello log.")
-    body = {
-        "message": "Go Serverless v1.1! Your function executed successfully!",
-        "input": event
-    }
-
-    response = {
+def get_all(_event, _context):
+    client = boto3.resource("dynamodb")
+    table = client.Table("EestiKott")
+    sentences = table.scan()
+    print(sentences)
+    return {
         "statusCode": 200,
-        "body": json.dumps(body)
+        "body": json.dumps("Hello from Lambda!")
     }
 
-    return response
+def capitalize_first_latters(text):
+    new = re.split(r' *[\.\?!][\'"\)\]]* *', text)
+    return [item.capitalize() for item in new]
+
+def insert_item(event, _context):
+    client = boto3.resource("dynamodb")
+    table = client.Table("EestiKott")
+
+    new_text = event["new_sentence"]
+    new_sentence = capitalize_first_latters(new_text)
+    new_eesti = event["new_eesti"]
+
+    try:
+        table.put_item(
+            Item={
+                "SentenceID": new_sentence,
+                "Eesti": new_eesti
+            }
+        )
+        return {
+            "statusCode": 200,
+            "body": json.dumps("New data inserted!")
+        }
+    except ClientError as e:
+        return {
+            "statusCode": 400,
+            "body": json.dumps(e.response['Error']['Message'])
+        }
+
+
+
+
