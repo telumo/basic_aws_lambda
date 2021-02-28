@@ -5,8 +5,6 @@ provider:
   region: eu-west-1
   runtime: python3.8
   memorySize: 128
-  iam:
-    role: arn:aws:iam::381246992755:role/Lmd
 
 functions:
   hello:

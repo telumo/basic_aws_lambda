@@ -4,7 +4,7 @@ import json
 def hello(event, context):
     print("Hello log.")
     body = {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
+        "message": "Go Serverless v1.1! Your function executed successfully!",
         "input": event
     }
 
