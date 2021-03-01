@@ -2,10 +2,10 @@
 + [Deploying to AWS Lambda with Serverless + GitHub Actions (Modern CI/CD) | Serverless Saturday](https://www.youtube.com/watch?v=oFYFqOzJdqY)
 
 ## TODO:
-- [ ] Enable to do GET method and it returns JSON.
-- [ ] Let that GET method cope with parameters.
-- [ ] Enable to do POST method and it returns something.
-- [ ] Uses can send data with that POST method.
+- [x] Enable to do GET method and it returns JSON.
+- [x] Let that GET method cope with parameters.
+- [x] Enable to do POST method and it returns something.
+- [ ] User can send data with that POST method.
 - [ ] Lambda function fetches data from DynamoDB upon a call.
 
 ## What I want to do
