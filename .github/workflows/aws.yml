@@ -1,10 +1,13 @@
 #  ref: https://github.com/mirrorhanyu/serverless-github-action-python
-name: Deploy main branch
+name: Deploy Lambda on AWS
 
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
+    paths:
+    - "serverless.yml"
+    - "src/handler.py"
 
 jobs:
   deploy:

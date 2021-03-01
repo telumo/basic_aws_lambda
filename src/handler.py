@@ -23,7 +23,8 @@ def insert_item(event, _context):
 
     new_text = event["new_sentence"]
     new_sentence = capitalize_first_latters(new_text)
-    new_eesti = event["new_eesti"]
+    new_text = event["new_eesti"]
+    new_eesti = capitalize_first_latters(new_text)
 
     try:
         table.put_item(
