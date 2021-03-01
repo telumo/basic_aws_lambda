@@ -13,9 +13,10 @@ def get_all(_event, _context):
         "body": json.dumps("Hello from Lambda!")
     }
 
-def capitalize_first_latters(text):
-    new = re.split(r' *[\.\?!][\'"\)\]]* *', text)
-    return [item.capitalize() for item in new]
+# "?" and "!" should be remained,,,better in front?
+# def capitalize_first_latters(text):
+#     new = re.split(r' *[\.\?!][\'"\)\]]* *', text)
+#     return [item.capitalize() for item in new]
 
 def insert_item(event, _context):
     client = boto3.resource("dynamodb")
