@@ -1,4 +1,5 @@
 [![Deploy Lambda on AWS](https://github.com/Hirokiii/basic_aws_lambda/actions/workflows/aws.yml/badge.svg)](https://github.com/Hirokiii/basic_aws_lambda/actions/workflows/aws.yml)
+[![CI Vue](https://github.com/Hirokiii/basic_aws_lambda/actions/workflows/vue.yml/badge.svg)](https://github.com/Hirokiii/basic_aws_lambda/actions/workflows/vue.yml)
 
 
 ### This is just for studying purpose.
