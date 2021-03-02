@@ -31,6 +31,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           
+      - name: Chdir
+        run: cd ./front
+        
       - name: Build
         run: npm run build
         
