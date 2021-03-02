@@ -5,7 +5,8 @@
 Dreaming "Hello world + alpha" to AWS (lambda, dynamoDB), Vue, CI/CD.  
 # Priceless Reference Source
 + [Deploying to AWS Lambda with Serverless + GitHub Actions (Modern CI/CD) | Serverless Saturday](https://www.youtube.com/watch?v=oFYFqOzJdqY)
-
++ [Vue JS Crash Course 2021](https://www.youtube.com/watch?v=qZXt1Aom3Cs&t=2390s)
++ [brand estonia](https://brand.estonia.ee/?lang=en) (If you use the assets in *front/src/assets*, you need to register here)
 ## TODO:
 - [x] Enable to do GET method and it returns JSON.
 - [x] Let that GET method cope with parameters.
