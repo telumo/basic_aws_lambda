@@ -31,6 +31,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
         
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        
       - name: Build
         run: npm install && npm run build --prefix ./front
         
